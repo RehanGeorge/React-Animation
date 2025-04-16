@@ -283,10 +283,6 @@ main {
   transition: transform 0.3s ease-out;
 }
 
-.challenge-item-details.expanded .challenge-item-details-icon {
-  transform: rotate(180deg);
-}
-
 .challenge-item-description {
   margin: 0;
 }
