@@ -1,8 +1,13 @@
 import classes from './Todo.module.css';
 
-const Todo: React.FC<{ text: string }> = (props) => {
+const Todo: React.FC<{ text: string; deleteHandler: (id: string) => void, id: string }> = (props) => {
     return (
-        <li className={classes.item}>{props.text}</li>
+        <div className={classes.item}>
+            <li className={classes.listItem}>
+                {props.text}
+                <button className={classes.button} onClick={() => props.deleteHandler(props.id)}>Delete</button>
+            </li>
+        </div>
     )
 };
 
